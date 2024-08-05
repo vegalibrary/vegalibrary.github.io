@@ -270,7 +270,7 @@ body {
         border-radius: var(--radius-medium);
         gap: 4px;
         z-index: 9999999999;
-        animation: scale .3s;
+        animation: scale .6s ease-in-out;
 
         &.active {
             transform: translate(-50%, -25vh) scale(1);
