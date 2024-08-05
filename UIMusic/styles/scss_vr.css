@@ -67,11 +67,11 @@ body {
 
 @keyframes scale {
     0% {
-        transform: translate(-50%, -25vh) scale(.6);
+        transform: translate(-50%, -25vh) scale(.8);
     }
 
-    80% {
-        transform: translate(-50%, -25vh) scale(1.05);
+    90% {
+        transform: translate(-50%, -25vh) scale(1.02);
     }
 
     100% {
