@@ -10,29 +10,27 @@ document.querySelector(".menubtn").addEventListener("click", () => {
     document.querySelector(".navigation-bar .float").classList.add("active");
     document.querySelector(".navigation-bar .float-bg").classList.add("active");
     document.body.classList.add('no-scroll');
+    history.pushState({ active: true }, "Active State", "#active");
 });
 
 document.querySelector(".navigation-bar .float-bg").addEventListener("click", () => {
     document.querySelector(".navigation-bar .float-bg").classList.remove("active");
     document.querySelector(".navigation-bar .float").classList.remove("active");
     document.body.classList.remove('no-scroll');
+    history.replaceState(null, null, location.href);
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    if (document.querySelector(".navigation-bar .float") && document.querySelector(".navigation-bar .float").classList.contains('active')) {
-        window.addEventListener('popstate', () => {
-            console.log('popstate event fired');
-            const floatElement = document.querySelector(".navigation-bar .float");
-            const floatBgElement = document.querySelector(".navigation-bar .float-bg");
+window.addEventListener('popstate', (event) => {
+    if (event.state && event.state.active) {
+        floatElement.classList.remove('active');
+        floatBgElement.classList.remove('active');
+        document.body.classList.remove('no-scroll');
 
-            if (floatElement && floatBgElement) {
-                floatBgElement.classList.remove("active");
-                floatElement.classList.remove("active");
-                document.body.classList.remove('no-scroll');
-            }
-        });
+        // Optionally, replace state to avoid additional history entries
+        history.replaceState(null, null, location.href);
     }
 });
+
 
 function CloseFloatMenu(x) {
     if (x.matches) {
