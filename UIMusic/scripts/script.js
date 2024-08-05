@@ -1,67 +1,47 @@
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 80) {
-        document.querySelector(".navigation-bar").classList.add("bg-blur");
-    } else {
-        document.querySelector(".navigation-bar").classList.remove("bg-blur");
+$(document).ready(function () {
+    // Cache jQuery selectors
+    const $navBar = $(".navigation-bar");
+    const $floatMenu = $(".navigation-bar .float");
+    const $floatBg = $(".navigation-bar .float-bg");
+    const $body = $("body");
+    const $toTopButton = $("#toTop");
+
+    // Handle scroll event
+    $(window).on("scroll", function () {
+        $navBar.toggleClass("bg-blur", $(window).scrollTop() > 80);
+        $toTopButton.toggle($(window).scrollTop() > 20);
+    });
+
+    // Toggle float menu
+    function toggleFloatMenu(isActive) {
+        $floatMenu.toggleClass("active", isActive);
+        $floatBg.toggleClass("active", isActive);
+        $body.toggleClass('no-scroll', isActive);
     }
-});
 
-document.querySelector(".menubtn").addEventListener("click", () => {
-    document.querySelector(".navigation-bar .float").classList.add("active");
-    document.querySelector(".navigation-bar .float-bg").classList.add("active");
-    document.body.classList.add('no-scroll');
-    history.pushState({ active: true }, "Active State", "#active");
-});
+    // Open and close float menu
+    $(".menubtn").on("click", function () {
+        toggleFloatMenu(true);
+    });
 
-document.querySelector(".navigation-bar .float-bg").addEventListener("click", () => {
-    document.querySelector(".navigation-bar .float-bg").classList.remove("active");
-    document.querySelector(".navigation-bar .float").classList.remove("active");
-    document.body.classList.remove('no-scroll');
-    history.replaceState(null, null, location.href);
-});
+    $floatBg.on("click", function () {
+        toggleFloatMenu(false);
+    });
 
-window.addEventListener('popstate', (event) => {
-    if (event.state && event.state.active) {
-        floatElement.classList.remove('active');
-        floatBgElement.classList.remove('active');
-        document.body.classList.remove('no-scroll');
+    // Handle media query change
+    const mediaQuery = window.matchMedia("(min-width: 900px)");
 
-        // Optionally, replace state to avoid additional history entries
-        history.replaceState(null, null, location.href);
+    function handleMediaChange(event) {
+        if (!event.matches) {
+            toggleFloatMenu(false);
+        }
     }
+
+    mediaQuery.addListener(handleMediaChange);
+    handleMediaChange(mediaQuery);
+
+    // Scroll to top button
+    $toTopButton.on("click", function () {
+        $("html, body").animate({ scrollTop: 0 }, "fast");
+    });
 });
-
-
-function CloseFloatMenu(x) {
-    if (x.matches) {
-        document.querySelector(".navigation-bar .float").classList.remove("active");
-        document.querySelector(".navigation-bar .float-bg").classList.remove("active");
-    } else {
-        document.querySelector(".navigation-bar .float").classList.remove("active");
-        document.querySelector(".navigation-bar .float-bg").classList.remove("active");
-    }
-}
-
-var x = window.matchMedia("(min-width: 900px)");
-CloseFloatMenu(x);
-x.addListener(CloseFloatMenu);
-
-mybutton = document.getElementById("toTop");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-    scrollFunction();
-};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-}
-
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
