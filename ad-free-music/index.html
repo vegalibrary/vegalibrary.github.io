@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad-Free Music Streaming</title>
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./styles/main.css">
+    <!-- Material Icons -->
+    <link rel="stylesheet"
+        href="./material_symbols/index.css" />
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="logo" href="#">MusicStream</a>
+            <button class="menu-btn">
+                <span class="msr">
+                    menu
+                </span>
+            </button>
+            <div class="navlinks">
+                <a class="link" href="javascript:void(0)" data-target="home">Home</a>
+                <a class="link" href="javascript:void(0)" data-target="features">Features</a>
+                <a class="link" href="javascript:void(0)" data-target="pricing">Pricing</a> 
+            </div>
+        </div>
+    </nav>
+    
+    <div class="float-bg"></div>
+    <div class="float"><span class="msr close-float">close</span></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1 class="headline">Stream Music Ad-Free</h1>
+            <p class="sub-headline">Enjoy uninterrupted music with our premium streaming service.</p>
+            <a href="javascript:void(0)" class="cta-btn">Sign up <span class="msr">arrow_forward</span></a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h1 class="title">Features</h1>
+            <div class="items">
+                <div class="item">
+                    <span class="msr">volume_up</span>
+                    <h3 class="sub-title">High-Quality Sound</h3>
+                    <p>Experience superior audio quality with every track.</p>
+                </div>
+                <div class="item main-item">
+                    <span class="msr">block</span>
+                    <h3 class="sub-title">Ad-Free Experience</h3>
+                    <p>Stream music without interruptions from ads for a seamless experience.</p>
+                </div>
+                <div class="item">
+                    <span class="msr">offline_bolt</span>
+                    <h3 class="sub-title">Offline Listening</h3>
+                    <p class="description">Enjoy your favorite tracks without needing an internet connection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="heading">
+                <h2 class="pricing-title">Choose Your Plan</h2>
+                <p class="pricing-subtitle">Explore our subscription options and find the one that suits you best.</p>
+            </div>
+            <div class="prices">
+                <!-- Basic Plan -->
+                <div class="pricing-card">
+                    <h3 class="heading">Free</h3>
+                    <p class="price">$5/month</p>
+                    <div class="infos">
+                        <ul class="pricing_features">
+                            <li>
+                                <span class="msr cancel">cancel</span>
+                                <span>Ad-Free</span>
+                            </li>
+                            <li>
+                                <span class="msr checked">check_circle</span>
+                                <span>Standard-Quality</span>
+                            </li>
+                            <li>
+                                <span class="msr cancel">cancel</span>
+                                <span>Offline Listening</span>
+                            </li>
+                            <li>
+                                <span class="msr cancel">cancel</span>
+                                <span>Exclusive Content</span>
+                            </li>
+                        </ul>
+                        <a href="javascript:void(0)" class="action_btn">Sign Up</a>
+                    </div>
+                </div>
+                <!-- Standard Plan -->
+                <div class="pricing-card">
+                    <h3 class="heading">Standard</h3>
+                    <p class="price">$4.99/month</p>
+                    <div class="infos">
+                        <ul class="pricing_features">
+                            <li>
+                                <span class="msr checked">check_circle</span>
+                                <span>Ad-Free</span>
+                            </li>
+                            <li>
+                                <span class="msr checked">check_circle</span>
+                                <span>High-Quality</span>
+                            </li>
+                            <li>
+                                <span class="msr cancel">cancel</span>
+                                <span>Offline Listening</span>
+                            </li>
+                            <li>
+                                <span class="msr cancel">cancel</span>
+                                <span>Exclusive Content</span>
+                            </li>
+                        </ul>
+                        <a href="javascript:void(0)" class="action_btn">Sign Up</a>
+                    </div>
+                </div>
+                <!-- Premium Plan -->
+                <div class="pricing-card">
+                    <h3 class="heading">Premium</h3>
+                    <p class="price">$15/month</p>
+                    <div class="infos">
+                        <ul class="pricing_features">
+                            <li>
+                                <span class="msr checked">check_circle</span>
+                                <span>Ad-Free</span>
+                            </li>
+                            <li>
+                                <span class="msr checked">check_circle</span>
+                                <span>High-Quality</span>
+                            </li>
+                            <li>
+                                <span class="msr checked">check_circle</span>
+                                <span>Offline Listening</span>
+                            </li>
+                            <li>
+                                <span class="msr checked">check_circle</span>
+                                <span>Exclusive Content</span>
+                            </li>
+                        </ul>
+                        <a href="javascript:void(0)" class="action_btn">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p class="mb-2">&copy; 2024 Ad-Free Music Streaming. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="javascript:void(0)" class="links">Contact Us</a>
+                <a href="javascript:void(0)" class="links">Terms of Service</a>
+                <a href="javascript:void(0)" class="links">Privacy Policy</a>
+                <a class="links" href="./readme.html">How to use</a> 
+            </div>
+        </div>
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
