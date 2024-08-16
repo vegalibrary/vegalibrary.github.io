@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customization Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            margin: 0 0 1rem 0;
+        }
+        code {
+            background: #eee;
+            padding: 0.2em;
+            border-radius: 3px;
+        }
+        pre {
+            background: #eee;
+            padding: 1em;
+            border-radius: 3px;
+            overflow-x: auto;
+        }
+        ul {
+            list-style: disc;
+            padding-left: 2em;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .code-block {
+            background: #333;
+            color: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Customizing the Ad-Free Music Streaming Website</h1>
+        <p>This guide focuses on how to customize the HTML template for your ad-free music streaming website.</p>
+
+        <div class="section">
+            <h2>1. Customizing the Navigation Bar</h2>
+
+            <h3>Logo</h3>
+            <p><strong>HTML Element:</strong></p>
+            <pre class="code-block">&lt;a class="logo" href="#"&gt;MusicStream&lt;/a&gt;</pre>
+            <p><strong>Customization:</strong> Replace <code>"MusicStream"</code> with your service's name or logo image. If using an image, modify it like this:</p>
+            <pre class="code-block">&lt;a class="logo" href="#"&gt;&lt;img src="path-to-your-logo.png" alt="Your Service Name"&gt;&lt;/a&gt;</pre>
+
+            <h3>Navigation Links</h3>
+            <p><strong>HTML Elements:</strong></p>
+            <pre class="code-block">
+&lt;a class="link" href="javascript:void(0)" data-target="home"&gt;Home&lt;/a&gt;
+&lt;a class="link" href="javascript:void(0)" data-target="features"&gt;Features&lt;/a&gt;
+&lt;a class="link" href="javascript:void(0)" data-target="pricing"&gt;Pricing&lt;/a&gt;
+            </pre>
+            <p><strong>Customization:</strong> Update the <code>href</code> attributes to point to actual sections or pages. For example:</p>
+            <pre class="code-block">
+&lt;a class="link" href="#home"&gt;Home&lt;/a&gt;
+&lt;a class="link" href="#features"&gt;Features&lt;/a&gt;
+&lt;a class="link" href="#pricing"&gt;Pricing&lt;/a&gt;
+            </pre>
+        </div>
+
+        <div class="section">
+            <h2>2. Customizing the Hero Section</h2>
+
+            <h3>Headline and Sub-Headline</h3>
+            <p><strong>HTML Elements:</strong></p>
+            <pre class="code-block">
+&lt;h1 class="headline"&gt;Stream Music Ad-Free&lt;/h1&gt;
+&lt;p class="sub-headline"&gt;Enjoy uninterrupted music with our premium streaming service.&lt;/p&gt;
+            </pre>
+            <p><strong>Customization:</strong> Replace the text within these tags to reflect your service's main selling points.</p>
+
+            <h3>Call-to-Action Button</h3>
+            <p><strong>HTML Element:</strong></p>
+            <pre class="code-block">
+&lt;a href="javascript:void(0)" class="cta-btn"&gt;Sign up &lt;span class="msr"&gt;arrow_forward&lt;/span&gt;&lt;/a&gt;
+            </pre>
+            <p><strong>Customization:</strong> Change the button text and link. For example:</p>
+            <pre class="code-block">
+&lt;a href="#signup" class="cta-btn"&gt;Get Started &lt;span class="msr"&gt;arrow_forward&lt;/span&gt;&lt;/a&gt;
+            </pre>
+        </div>
+
+        <div class="section">
+            <h2>3. Customizing the Features Section</h2>
+
+            <h3>Feature Items</h3>
+            <p><strong>HTML Elements:</strong></p>
+            <pre class="code-block">
+&lt;h3 class="sub-title"&gt;High-Quality Sound&lt;/h3&gt;
+&lt;p&gt;Experience superior audio quality with every track.&lt;/p&gt;
+            </pre>
+            <p><strong>Customization:</strong> Modify the <code>&lt;h3&gt;</code> and <code>&lt;p&gt;</code> tags within each <code>.item</code> to describe the features of your service. You can also change the associated Material Icons by modifying the <code>&lt;span class="msr"&gt;</code> content.</p>
+
+            <p><strong>Example:</strong></p>
+            <pre class="code-block">
+&lt;div class="item"&gt;
+    &lt;span class="msr"&gt;music_note&lt;/span&gt;
+    &lt;h3 class="sub-title"&gt;Custom Playlists&lt;/h3&gt;
+    &lt;p&gt;Create and share personalized playlists with friends.&lt;/p&gt;
+&lt;/div&gt;
+            </pre>
+        </div>
+
+        <div class="section">
+            <h2>4. Customizing the Pricing Section</h2>
+
+            <h3>Plan Titles and Prices</h3>
+            <p><strong>HTML Elements:</strong></p>
+            <pre class="code-block">
+&lt;h3 class="heading"&gt;Free&lt;/h3&gt;
+&lt;p class="price"&gt;$5/month&lt;/p&gt;
+            </pre>
+            <p><strong>Customization:</strong> Change the plan names (e.g., <code>Free</code>, <code>Standard</code>, <code>Premium</code>) and the corresponding prices.</p>
+
+            <h3>Plan Features</h3>
+            <p><strong>HTML Elements:</strong></p>
+            <pre class="code-block">
+&lt;ul class="pricing_features"&gt;
+    &lt;li&gt;&lt;span class="msr cancel"&gt;cancel&lt;/span&gt;&lt;span&gt;Ad-Free&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+            </pre>
+            <p><strong>Customization:</strong> Adjust the features available in each plan by adding or removing <code>&lt;li&gt;</code> elements. Use the appropriate Material Icons for each feature (<code>check_circle</code> for included, <code>cancel</code> for excluded).</p>
+
+            <p><strong>Example:</strong></p>
+            <pre class="code-block">
+&lt;ul class="pricing_features"&gt;
+    &lt;li&gt;&lt;span class="msr check_circle"&gt;check_circle&lt;/span&gt;&lt;span&gt;Custom Playlists&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="msr check_circle"&gt;check_circle&lt;/span&gt;&lt;span&gt;High-Quality Sound&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="msr cancel"&gt;cancel&lt;/span&gt;&lt;span&gt;Offline Listening&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+            </pre>
+        </div>
+
+        <div class="section">
+            <h2>5. Customizing the Footer</h2>
+
+            <h3>Footer Links</h3>
+            <p><strong>HTML Elements:</strong></p>
+            <pre class="code-block">
+&lt;a href="javascript:void(0)" class="links"&gt;Contact Us&lt;/a&gt;
+            </pre>
+            <p><strong>Customization:</strong> Update the <code>href</code> attributes to link to actual pages or sections, such as <code>contact.html</code> or <code>#contact</code>.</p>
+
+            <p><strong>Example:</strong></p>
+            <pre class="code-block">
+&lt;a href="contact.html" class="links"&gt;Contact Us&lt;/a&gt;
+&lt;a href="terms.html" class="links"&gt;Terms of Service&lt;/a&gt;
+            </pre>
+        </div>
+
+        <div class="section">
+            <h2>6. Updating the Styles</h2>
+
+            <h3>CSS Customization</h3>
+            <p><strong>File:</strong> <code>styles/main.css</code></p>
+            <p><strong>Customization:</strong> Modify or add custom styles in <code>main.css</code> to change the look and feel of your website. You can change colors, typography, layout, etc.</p>
+
+            <p><strong>Example:</strong></p>
+            <pre class="code-block">
+.headline {
+    font-size: 3rem;
+    color: #1a202c; /* Change headline color */
+}
+
+.cta-btn {
+    background-color: #38b2ac; /* Change button background */
+    color: white;
+}
+            </pre>
+        </div>
+
+        <div class="section">
+            <h2>7. Updating JavaScript</h2>
+
+            <h3>Interactivity</h3>
+            <p><strong>File:</strong> <code>scripts/script.js</code></p>
+            <p><strong>Customization:</strong> Implement or modify JavaScript functionality, such as toggling the navigation menu or adding smooth scrolling.</p>
+
+            <p><strong>Example:</strong></p>
+            <pre class="code-block">
+document.querySelector('.menu-btn').addEventListener('click', function() {
+    document.querySelector('.navlinks').classList.toggle('active');
+});
+            </pre>
+        </div>
+    </div>
+</body>
+</html>
