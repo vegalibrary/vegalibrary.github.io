@@ -14,7 +14,7 @@ This guide focuses on how to customize the HTML template for your ad-free music 
 
 **Customization:** Replace `"MusicStream"` with your service's name or logo image. If using an image, modify it like this:
 
-<a class="logo" href="#"><img src="path-to-your-logo.png" alt="Your Service Name"></a>
+'''<a class="logo" href="#"><img src="path-to-your-logo.png" alt="Your Service Name"></a>'''
 
 ### Navigation Links
 
