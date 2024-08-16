@@ -1,5 +1,3 @@
-  Customization Guide body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f4; } .container { width: 80%; margin: auto; overflow: hidden; } h1, h2, h3 { color: #333; } h1 { font-size: 2rem; margin-bottom: 1rem; } h2 { font-size: 1.5rem; margin-bottom: 0.75rem; } h3 { font-size: 1.25rem; margin-bottom: 0.5rem; } p { margin: 0 0 1rem 0; } code { background: #eee; padding: 0.2em; border-radius: 3px; } pre { background: #eee; padding: 1em; border-radius: 3px; overflow-x: auto; } ul { list-style: disc; padding-left: 2em; } a { color: #3498db; text-decoration: none; } a:hover { text-decoration: underline; } .section { margin-bottom: 2rem; padding: 1rem; background: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); } .code-block { background: #333; color: #f4f4f4; padding: 1rem; border-radius: 5px; overflow-x: auto; }
-
 Customizing the Ad-Free Music Streaming Website
 ===============================================
 
